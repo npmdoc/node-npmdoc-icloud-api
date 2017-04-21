@@ -1,0 +1,831 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>icloud-api (v1.3.0)</a>
+</h1>
+<h4>https://www.npmjs.com/package/icloud
+ https://github.com/picklepete/pyicloud/blob/master/pyicloud/base.py
+ https://github.com/matin/icloud/blob/master/icloud/icloud.py
+ https://cdn.apple-cloudkit.com/ck/1/cloudkit.js</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.icloud-api">module icloud-api</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.icloud-api">
+            function <span class="apidocSignatureSpan"></span>icloud-api
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.account">
+            function <span class="apidocSignatureSpan">icloud-api.</span>account
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.file">
+            function <span class="apidocSignatureSpan">icloud-api.</span>file
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.index">
+            function <span class="apidocSignatureSpan">icloud-api.</span>index
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">icloud-api.</span>account.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">icloud-api.</span>file.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">icloud-api.</span>index.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.icloud-api.account">module icloud-api.account</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.account.account">
+            function <span class="apidocSignatureSpan">icloud-api.</span>account
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.icloud-api.account.prototype">module icloud-api.account.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.account.prototype.initialize">
+            function <span class="apidocSignatureSpan">icloud-api.account.prototype.</span>initialize
+            <span class="apidocSignatureSpan">(icloud, chain)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.icloud-api.file">module icloud-api.file</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.file.file">
+            function <span class="apidocSignatureSpan">icloud-api.</span>file
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.icloud-api.file.prototype">module icloud-api.file.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.file.prototype.dir">
+            function <span class="apidocSignatureSpan">icloud-api.file.prototype.</span>dir
+            <span class="apidocSignatureSpan">(folderId, chain)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.file.prototype.fetchDirectories">
+            function <span class="apidocSignatureSpan">icloud-api.file.prototype.</span>fetchDirectories
+            <span class="apidocSignatureSpan">(chain)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.file.prototype.fetchDirectoryTree">
+            function <span class="apidocSignatureSpan">icloud-api.file.prototype.</span>fetchDirectoryTree
+            <span class="apidocSignatureSpan">(chain, folderId, tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.file.prototype.initialize">
+            function <span class="apidocSignatureSpan">icloud-api.file.prototype.</span>initialize
+            <span class="apidocSignatureSpan">(icloud, chain)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.icloud-api.index">module icloud-api.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.index.index">
+            function <span class="apidocSignatureSpan">icloud-api.</span>index
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.icloud-api.index.prototype">module icloud-api.index.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.index.prototype.fetchAll">
+            function <span class="apidocSignatureSpan">icloud-api.index.prototype.</span>fetchAll
+            <span class="apidocSignatureSpan">(chain)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.icloud-api.index.prototype.initialize">
+            function <span class="apidocSignatureSpan">icloud-api.index.prototype.</span>initialize
+            <span class="apidocSignatureSpan">(icloud, chain)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.icloud-api" id="apidoc.module.icloud-api">module icloud-api</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.icloud-api" id="apidoc.element.icloud-api.icloud-api">
+        function <span class="apidocSignatureSpan"></span>icloud-api
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">icloud-api = function () {
+  var self = this;
+    //autobinding takes place here
+  if(proto.Binds) proto.Binds.forEach(function(f){
+    var original = self[f];
+    if(original)
+      self[f] = mixIn(self[f].bind(self), original);
+  });
+
+    //clone non function/static properties to current instance
+  for(var key in out.prototype) {
+    var v = out.prototype[key], t = kindOf(v);
+
+    if(key.match(verbs) || t === "Function" || t == "GeneratorFunction")
+      continue;
+
+    if(t == "Object")
+      self[key] = merge({}, self[key]); //create(null, self[key]);
+    else if(t == "Array")
+      self[key] = v.slice(); //clone ??
+    else
+      self[key] = v;
+  }
+
+  if(proto.Implements)
+    proto.Implements.forEach(function(Mixin){
+      Mixin.call(self);
+    });
+
+
+
+
+  constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.account" id="apidoc.element.icloud-api.account">
+        function <span class="apidocSignatureSpan">icloud-api.</span>account
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">account = function () {
+  var self = this;
+    //autobinding takes place here
+  if(proto.Binds) proto.Binds.forEach(function(f){
+    var original = self[f];
+    if(original)
+      self[f] = mixIn(self[f].bind(self), original);
+  });
+
+    //clone non function/static properties to current instance
+  for(var key in out.prototype) {
+    var v = out.prototype[key], t = kindOf(v);
+
+    if(key.match(verbs) || t === "Function" || t == "GeneratorFunction")
+      continue;
+
+    if(t == "Object")
+      self[key] = merge({}, self[key]); //create(null, self[key]);
+    else if(t == "Array")
+      self[key] = v.slice(); //clone ??
+    else
+      self[key] = v;
+  }
+
+  if(proto.Implements)
+    proto.Implements.forEach(function(Mixin){
+      Mixin.call(self);
+    });
+
+
+
+
+  constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.file" id="apidoc.element.icloud-api.file">
+        function <span class="apidocSignatureSpan">icloud-api.</span>file
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">file = function () {
+  var self = this;
+    //autobinding takes place here
+  if(proto.Binds) proto.Binds.forEach(function(f){
+    var original = self[f];
+    if(original)
+      self[f] = mixIn(self[f].bind(self), original);
+  });
+
+    //clone non function/static properties to current instance
+  for(var key in out.prototype) {
+    var v = out.prototype[key], t = kindOf(v);
+
+    if(key.match(verbs) || t === "Function" || t == "GeneratorFunction")
+      continue;
+
+    if(t == "Object")
+      self[key] = merge({}, self[key]); //create(null, self[key]);
+    else if(t == "Array")
+      self[key] = v.slice(); //clone ??
+    else
+      self[key] = v;
+  }
+
+  if(proto.Implements)
+    proto.Implements.forEach(function(Mixin){
+      Mixin.call(self);
+    });
+
+
+
+
+  constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.index" id="apidoc.element.icloud-api.index">
+        function <span class="apidocSignatureSpan">icloud-api.</span>index
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function () {
+  var self = this;
+    //autobinding takes place here
+  if(proto.Binds) proto.Binds.forEach(function(f){
+    var original = self[f];
+    if(original)
+      self[f] = mixIn(self[f].bind(self), original);
+  });
+
+    //clone non function/static properties to current instance
+  for(var key in out.prototype) {
+    var v = out.prototype[key], t = kindOf(v);
+
+    if(key.match(verbs) || t === "Function" || t == "GeneratorFunction")
+      continue;
+
+    if(t == "Object")
+      self[key] = merge({}, self[key]); //create(null, self[key]);
+    else if(t == "Array")
+      self[key] = v.slice(); //clone ??
+    else
+      self[key] = v;
+  }
+
+  if(proto.Implements)
+    proto.Implements.forEach(function(Mixin){
+      Mixin.call(self);
+    });
+
+
+
+
+  constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.icloud-api.account" id="apidoc.module.icloud-api.account">module icloud-api.account</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.account.account" id="apidoc.element.icloud-api.account.account">
+        function <span class="apidocSignatureSpan">icloud-api.</span>account
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">account = function () {
+  var self = this;
+    //autobinding takes place here
+  if(proto.Binds) proto.Binds.forEach(function(f){
+    var original = self[f];
+    if(original)
+      self[f] = mixIn(self[f].bind(self), original);
+  });
+
+    //clone non function/static properties to current instance
+  for(var key in out.prototype) {
+    var v = out.prototype[key], t = kindOf(v);
+
+    if(key.match(verbs) || t === "Function" || t == "GeneratorFunction")
+      continue;
+
+    if(t == "Object")
+      self[key] = merge({}, self[key]); //create(null, self[key]);
+    else if(t == "Array")
+      self[key] = v.slice(); //clone ??
+    else
+      self[key] = v;
+  }
+
+  if(proto.Implements)
+    proto.Implements.forEach(function(Mixin){
+      Mixin.call(self);
+    });
+
+
+
+
+  constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.icloud-api.account.prototype" id="apidoc.module.icloud-api.account.prototype">module icloud-api.account.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.account.prototype.initialize" id="apidoc.element.icloud-api.account.prototype.initialize">
+        function <span class="apidocSignatureSpan">icloud-api.account.prototype.</span>initialize
+        <span class="apidocSignatureSpan">(icloud, chain)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (icloud, chain){
+
+  var self = this;
+
+  this.icloud = icloud;
+
+  var service_root = icloud.session.webservices['account']['url'];
+  var base_url     = util.format("%s/setup/ws/1/storageUsageInfo", service_root);
+  var query = url.parse(base_url);
+  this.icloud.request(query, null, function(err, body){
+    if(err)
+      return chain(err);
+
+    console.log("GOT RESPONSE", err, body);
+    chain();
+
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.icloud-api.file" id="apidoc.module.icloud-api.file">module icloud-api.file</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.file.file" id="apidoc.element.icloud-api.file.file">
+        function <span class="apidocSignatureSpan">icloud-api.</span>file
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">file = function () {
+  var self = this;
+    //autobinding takes place here
+  if(proto.Binds) proto.Binds.forEach(function(f){
+    var original = self[f];
+    if(original)
+      self[f] = mixIn(self[f].bind(self), original);
+  });
+
+    //clone non function/static properties to current instance
+  for(var key in out.prototype) {
+    var v = out.prototype[key], t = kindOf(v);
+
+    if(key.match(verbs) || t === "Function" || t == "GeneratorFunction")
+      continue;
+
+    if(t == "Object")
+      self[key] = merge({}, self[key]); //create(null, self[key]);
+    else if(t == "Array")
+      self[key] = v.slice(); //clone ??
+    else
+      self[key] = v;
+  }
+
+  if(proto.Implements)
+    proto.Implements.forEach(function(Mixin){
+      Mixin.call(self);
+    });
+
+
+
+
+  constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.icloud-api.file.prototype" id="apidoc.module.icloud-api.file.prototype">module icloud-api.file.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.file.prototype.dir" id="apidoc.element.icloud-api.file.prototype.dir">
+        function <span class="apidocSignatureSpan">icloud-api.file.prototype.</span>dir
+        <span class="apidocSignatureSpan">(folderId, chain)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dir = function (folderId, chain){
+  var base_url = util.format("%s/retrieveItemDetailsInFolders", this.service_root);
+
+  var query = url.parse(base_url);
+
+  var params = [{
+    "drivewsid":folderId,
+    "partialData":false
+  }];
+
+  this.icloud.request(query, params, chain);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  this.service_root = icloud.session.webservices['drivews']['url'];
+
+  chain();
+},
+
+fetchDirectories : function(chain){
+  this.<span class="apidocCodeKeywordSpan">dir</span>("FOLDER::com.apple.CloudDocs::root", chain);
+},
+
+fetchDirectoryTree : function(chain, folderId, tree){
+  if(!folderId)
+    folderId = "FOLDER::com.apple.CloudDocs::root";
+  if(!tree)
+    tree = {};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.file.prototype.fetchDirectories" id="apidoc.element.icloud-api.file.prototype.fetchDirectories">
+        function <span class="apidocSignatureSpan">icloud-api.file.prototype.</span>fetchDirectories
+        <span class="apidocSignatureSpan">(chain)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetchDirectories = function (chain){
+  this.dir("FOLDER::com.apple.CloudDocs::root", chain);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.file.prototype.fetchDirectoryTree" id="apidoc.element.icloud-api.file.prototype.fetchDirectoryTree">
+        function <span class="apidocSignatureSpan">icloud-api.file.prototype.</span>fetchDirectoryTree
+        <span class="apidocSignatureSpan">(chain, folderId, tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetchDirectoryTree = function (chain, folderId, tree){
+  if(!folderId)
+    folderId = "FOLDER::com.apple.CloudDocs::root";
+  if(!tree)
+    tree = {};
+
+
+  this.dir(folderId, function(err, directories){
+
+    directories = reindex(directories, "drivewsid");
+    if(!directories[folderId])
+      return chain();
+
+
+    var children = [];
+    directories[folderId].items.forEach(function(v){
+      if(v.type == "FOLDER")
+        children.push(v['drivewsid']);
+    });
+
+    async.series(children, function(v, chain) {
+      self.fetchDirectoryTree(chain, v, tree);
+    }, function(){
+
+    });
+
+
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var children = [];
+    directories[folderId].items.forEach(function(v){
+      if(v.type == "FOLDER")
+        children.push(v['drivewsid']);
+    });
+
+    async.series(children, function(v, chain) {
+      self.<span class="apidocCodeKeywordSpan">fetchDirectoryTree</span>(chain, v, tree);
+    }, function(){
+
+    });
+
+
+  });
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.file.prototype.initialize" id="apidoc.element.icloud-api.file.prototype.initialize">
+        function <span class="apidocSignatureSpan">icloud-api.file.prototype.</span>initialize
+        <span class="apidocSignatureSpan">(icloud, chain)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (icloud, chain){
+
+  var self = this;
+
+  this.icloud = icloud;
+
+  this.service_root = icloud.session.webservices['drivews']['url'];
+
+  chain();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.icloud-api.index" id="apidoc.module.icloud-api.index">module icloud-api.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.index.index" id="apidoc.element.icloud-api.index.index">
+        function <span class="apidocSignatureSpan">icloud-api.</span>index
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function () {
+  var self = this;
+    //autobinding takes place here
+  if(proto.Binds) proto.Binds.forEach(function(f){
+    var original = self[f];
+    if(original)
+      self[f] = mixIn(self[f].bind(self), original);
+  });
+
+    //clone non function/static properties to current instance
+  for(var key in out.prototype) {
+    var v = out.prototype[key], t = kindOf(v);
+
+    if(key.match(verbs) || t === "Function" || t == "GeneratorFunction")
+      continue;
+
+    if(t == "Object")
+      self[key] = merge({}, self[key]); //create(null, self[key]);
+    else if(t == "Array")
+      self[key] = v.slice(); //clone ??
+    else
+      self[key] = v;
+  }
+
+  if(proto.Implements)
+    proto.Implements.forEach(function(Mixin){
+      Mixin.call(self);
+    });
+
+
+
+
+  constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.icloud-api.index.prototype" id="apidoc.module.icloud-api.index.prototype">module icloud-api.index.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.index.prototype.fetchAll" id="apidoc.element.icloud-api.index.prototype.fetchAll">
+        function <span class="apidocSignatureSpan">icloud-api.index.prototype.</span>fetchAll
+        <span class="apidocSignatureSpan">(chain)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetchAll = function (chain){
+
+  var contact_url = this.icloud.session.webservices.contacts.url;
+  contact_url = util.format("%s/co/startup", contact_url);
+
+  //params = merge(params, {'dsid': session['dsInfo']['dsid']});
+  var params = merge({}, {
+  //    clientVersion : "2.1",
+      locale : "en_US",
+      order : "last,first",
+  });
+
+  var query = merge(url.parse(contact_url), {
+    qs : params,
+  });
+
+  this.icloud.request(query, null, function(err, body){
+    console.log(res.statusCode, body);
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+```
+
+## API : contacts
+```
+// Fetch iCloud contacts
+client.contact.<span class="apidocCodeKeywordSpan">fetchAll</span>(function(err, contacts){
+  //tada
+});
+```
+
+## API : photo (&amp;videos)
+
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.icloud-api.index.prototype.initialize" id="apidoc.element.icloud-api.index.prototype.initialize">
+        function <span class="apidocSignatureSpan">icloud-api.index.prototype.</span>initialize
+        <span class="apidocSignatureSpan">(icloud, chain)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (icloud, chain) {
+  this.icloud = icloud;
+  //this.session = icloud.session;
+  chain();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
